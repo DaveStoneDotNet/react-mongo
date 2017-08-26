@@ -1,0 +1,8 @@
+{
+  "name": "react-mongo",
+  "description": "react-mongo",
+  "repository": "https://github.com/DaveStoneDotNet/react-mongo",
+  "logo": "",
+  "keywords": ["node", "express", "static", "react", "webpack", "mongodb"],
+  "addons" : ["mlab"]
+}
