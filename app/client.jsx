@@ -4,12 +4,12 @@ import { Provider }               from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore }   from 'react-router-redux';
 
-import * as types                 from './types';
-import createRoutes               from './routes';
+import * as types                 from './store/types';
 import configureStore             from './store/configureStore';
 import fetchDataForRoute          from './utils/fetchDataForRoute';
+import createRoutes               from './routes';
 
-// Grab the state from a global injected into server-generated HTML
+// Grab state from a global injected into server-generated HTML
 const initialState = window.__INITIAL_STATE__;
 
 const store   = configureStore(initialState, browserHistory);

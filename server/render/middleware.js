@@ -2,7 +2,7 @@ import { createMemoryHistory, match } from 'react-router';
 
 import createRoutes                   from '../../app/routes';
 import configureStore                 from '../../app/store/configureStore';
-import * as types                     from '../../app/types';
+import * as types                     from '../../app/store/types';
 import fetchDataForRoute              from '../../app/utils/fetchDataForRoute';
 
 import pageRenderer                   from './pageRenderer';
