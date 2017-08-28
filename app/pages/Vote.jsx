@@ -13,8 +13,8 @@ class Vote extends Component {
   }
 
   pageTitle = () => {
-    return 'CMA';
-  };
+                      return 'CMA';
+                    };
 
   pageMeta = () => {
     return [
@@ -29,6 +29,7 @@ class Vote extends Component {
                    };
 
   render() {
+    console.log('VOTE PAGE PROPS', this.props);
     return (
       <Page {...this.getMetaData()}>
         <VoteContainer {...this.props} />

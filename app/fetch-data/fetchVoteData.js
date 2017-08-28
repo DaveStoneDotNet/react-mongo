@@ -1,6 +1,7 @@
 import { voteService } from '../services';
 
 const fetchData = () => {
+
   return voteService().getTopics()
   .then(res => res.data)
   // Returning [] as a placeholder now so it does not error out when this service

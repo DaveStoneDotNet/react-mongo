@@ -9,7 +9,14 @@ import configureStore             from './store/configureStore';
 import fetchDataForRoute          from './utils/fetchDataForRoute';
 import createRoutes               from './routes';
 
-// Grab state from a global injected into server-generated HTML
+// --------------------------------------------------------------------------------
+// This is the client-side entry point per the webpack.config entry configuration.
+// - /app/routes then defines /app/pages/App.jsx as the first, default, react 
+// component rendered into the main server/render/pageRenderer.jsx acting as the 
+// main, loaded 'index.html' page.
+// --------------------------------------------------------------------------------
+
+// Grab state from the global injected into server-generated HTML
 const initialState = window.__INITIAL_STATE__;
 
 const store   = configureStore(initialState, browserHistory);
@@ -40,6 +47,7 @@ function onUpdate() {
 
 // Router converts <Route> element hierarchy to a route config:
 // Read more https://github.com/rackt/react-router/blob/latest/docs/Glossary.md#routeconfig
+
 render(
   <Provider store={store}>
     <Router history={history} onUpdate={onUpdate}>

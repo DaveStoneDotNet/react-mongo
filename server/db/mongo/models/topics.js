@@ -10,6 +10,8 @@ const TopicSchema = new mongoose.Schema({
                                           date:  { type: Date, default: Date.now }
                                         });
 
-// Compiles the schema into a model, opening (or creating, if nonexistent) the 'Topic' collection in the MongoDB database
+// Compiles the schema into a model, opening (or creating, if nonexistent) the 'Topic' collection in the MongoDB database.
+// see: http://mongoosejs.com/docs/index.html
+
 export default mongoose.model('Topic', TopicSchema);
 
